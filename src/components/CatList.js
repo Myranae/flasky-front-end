@@ -1,13 +1,13 @@
 import Cat from "./Cat";
 
 const CatList = () => {
-    return (
-        <ul>
-            <Cat />
-            <Cat />
-            <Cat />ß
-        </ul>
-    );
+  return (
+    <ul>
+      <Cat />
+      <Cat />
+      <Cat />
+    </ul>
+  );
 };
 
 export default CatList;
