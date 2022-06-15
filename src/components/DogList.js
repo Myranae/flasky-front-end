@@ -1,34 +1,18 @@
 import Dog from "./Dog";
 import "./DogList.css";
+import PropTypes from "prop-types";
 
-const DogList = () => {
-    const dog_data = [
-        {
-          name: "Wishbone",
-          favoriteToy: "Squeaker",
-          chipNumber: "82373",
-        },
-        {
-          name: "Appa",
-          favoriteToy: "Ball",
-          chipNumber: "29238",
-        },
-        {
-          name: "Jimminy",
-          favoriteToy: "Bone",
-          chipNumber: "72902",
-        },
-       ];
-
-    const dogCOmponent
-
+const DogList = (props) => {
+  const dogComponents = props.dogData.map((dog) => {
     return (
-        <ul>
-            <Dog />
-            <Dog />
-            <Dog />
-        </ul>
+      <Dog
+        name={props.name}
+        favoriteToy={props.favoriteToy}
+        chipNumber={props.chipNumber}
+      />
     );
+  });
+  return <ul>{dogComponents}</ul>;
 };
 
 export default DogList;
