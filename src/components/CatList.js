@@ -1,4 +1,5 @@
 import Cat from "./Cat";
+import PropTypes from "prop-types";
 
 const CatList = (props) => {
     const catComponents = props.catData.map((cat) => {
@@ -17,6 +18,10 @@ const CatList = (props) => {
             <ul>{catComponents}</ul>
         </section>
     );
+};
+
+CatList.propTypes = {
+    catData: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default CatList;

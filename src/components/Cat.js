@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Cat = (props) => {
     return (
@@ -9,6 +10,12 @@ const Cat = (props) => {
             <button>Pet Cat</button>
         </li>
     );
+};
+
+Cat.propTypes = {
+    name: PropTypes.string.isRequired,
+    caretaker: PropTypes.string.isRequired,
+    petCount: PropTypes.number.isRequired,
 };
 
 export default Cat;
